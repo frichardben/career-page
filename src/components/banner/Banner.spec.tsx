@@ -1,5 +1,5 @@
 import { Banner } from './Banner'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import mock from './Banner.mock'
 
 describe('Banner', () => {
@@ -7,9 +7,21 @@ describe('Banner', () => {
     expect(typeof Banner).toBe('function')
   })
 
-  it('should be render component', () => {
+  it('should be render without crashing', () => {
     const { container } = render(<Banner {...mock} />)
 
     expect(container).toBeInTheDocument()
+  })
+
+  it('should render a title', () => {
+    render(<Banner {...mock} />)
+    const headingElement = screen.getByRole('heading', { name: 'Vagas' })
+    expect(headingElement).toBeInTheDocument()
+  })
+
+  it('should be render imageAlt', () => {
+    render(<Banner {...mock} />)
+    const imgAlt = screen.getByAltText(/photo/)
+    expect(imgAlt).toBeInTheDocument()
   })
 })

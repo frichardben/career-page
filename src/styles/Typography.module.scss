@@ -1,0 +1,27 @@
+@use './variables' as *;
+
+$themeVariant: 'h1' $font-size-xlarge $font-weight-medium,
+  'h2' $font-size-large $font-weight-medium,
+  'h3' $font-size-medium $font-weight-regular,
+  'h4' $font-size-medium $font-weight-regular,
+  'p' $font-size-small $font-weight-regular;
+
+.typography {
+  @each $name, $font, $weight in $themeVariant {
+    &-#{$name} {
+      line-height: 1.2;
+      font-size: $font;
+      font-weight: $weight;
+    }
+  }
+}
+
+$themeColor: 'orange' $orange, 'white' $white, 'cyan' $cyan, 'gray' $gray;
+
+.color {
+  @each $name, $color in $themeColor {
+    &-#{$name} {
+      color: $color;
+    }
+  }
+}

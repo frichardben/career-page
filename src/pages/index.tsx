@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Banner } from '../components/banner/Banner'
+import { Typography } from '../components/typography/Typography'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -31,6 +32,16 @@ const Home: NextPage = () => {
             title="Trabalhe no Elo7"
           />
         </header>
+        <div className={styles.container}>
+          <Typography variant={'p'} weight={'light'} color={'gray'}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            convallis a urna dignissim interdum. Maecenas nec diam sit amet
+            tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
+            pharetra a. Morbi commodo feugiat vulputate. Maecenas vel tincidunt
+            leo. Donec accumsan, mauris hendrerit sagittis finibus, purus felis
+            iaculis ipsum, id maximus nulla nibh ac lectus.
+          </Typography>
+        </div>
       </main>
 
       <footer className={styles.footer}>
