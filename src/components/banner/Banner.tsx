@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../../styles/Banner.module.scss'
+import styles from './Banner.module.scss'
 
 export type IBannerProps = {
   img: string

@@ -1,5 +1,5 @@
 import * as NextImage from 'next/image'
-import './reset.scss'
+import '../src/styles/storybook.scss'
 
 const OriginalNextImage = NextImage.default
 
