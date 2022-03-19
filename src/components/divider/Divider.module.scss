@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+
+.divider {
+  height: 0.14rem;
+  border: 0;
+  background: $line;
+}
+
+.jobs {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+
+  span {
+    margin-left: auto;
+  }
+}

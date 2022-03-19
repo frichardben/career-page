@@ -1,0 +1,18 @@
+@use '../../styles/mixin';
+@use '../../styles/variables' as *;
+
+.jobs {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  color: #3fa3ac;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+
+  span {
+    margin-left: auto;
+    color: #7f7b81;
+  }
+}

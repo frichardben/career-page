@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Typography } from '../typography/Typography'
-import styles from '../../styles/Card.module.scss'
+import styles from './Card.module.scss'
 
 export interface ICardProps {
   imageUrl: string
