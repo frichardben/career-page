@@ -13,8 +13,8 @@ export const Banner = ({ img, alt, title }: IBannerProps) => (
       className={styles.image}
       src={img}
       alt={alt}
-      layout="fill"
-      objectFit="cover"
+      layout={'fill'}
+      objectFit={'cover'}
     />
     <h1 className={styles.title}>{title}</h1>
   </div>

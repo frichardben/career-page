@@ -15,10 +15,10 @@ export const Card = ({ imageUrl, alt, title, description }: ICardProps) => {
       <Image
         className={styles.image}
         src={imageUrl}
-        height={'180px'}
-        width={'100%'}
+        height={'140'}
+        width={'140'}
+        objectFit={'contain'}
         alt={alt}
-        objectFit={'cover'}
       />
       <div className={styles.body}>
         <Typography className={styles.title} variant="h5">

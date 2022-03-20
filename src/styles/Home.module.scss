@@ -1,4 +1,5 @@
-@use './mixin.scss';
+@import './mixin.scss';
+@import './variables';
 
 .container {
   padding: 0 2rem;
@@ -19,17 +20,108 @@
   align-items: center;
 }
 
+.description {
+  color: #7f787a;
+}
+
+.line {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.dividerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: $cyan;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.info {
+  background-color: $light-gray;
+  padding-block: 50px;
+  margin-block: 50px;
+}
+
+.team {
+  margin-top: 50px;
+
+  h3 {
+    text-transform: uppercase;
+    color: #7d7873;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+}
+
+.sectionCulture {
+  padding: 0 2rem;
+}
+.culture {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.imageBottom {
+  padding: 0 2rem;
+  text-align: center;
+  margin-block: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.sectionOpportunity {
+  h4 {
+    text-align: center;
+  }
+}
+.opportunity {
+  text-transform: uppercase;
+  color: #7d7873;
+}
+
+.containerOpportunity {
+  padding: 0 2rem;
+  h5 {
+    margin-top: 50px;
+  }
+
+  ul {
+    margin-block: 50px;
+
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
-}
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: #a0a4ad;
+  }
 }
