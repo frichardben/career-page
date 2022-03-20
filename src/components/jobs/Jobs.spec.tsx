@@ -25,7 +25,7 @@ describe('Jobs', () => {
 
     render(<Jobs {...props}/>)
 
-    const title = screen.getByRole('heading', {name: 'React Native'})
+    const title = screen.getByText('React Native')
     expect(title).toBeDefined()
 
     const location = screen.getByText('Curitiba')
