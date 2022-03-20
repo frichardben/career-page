@@ -7,7 +7,6 @@ describe('Typography', () => {
   beforeEach(() => {
     props = {
       variant: 'h3',
-      color: 'gray',
       children: 'Teste 1'
     }
   })
