@@ -1,11 +1,9 @@
 @use '../../styles/variables' as *;
 
 $themeVariant: 'h1' $font-size-xlarge $font-weight-bold,
-  'h2' $font-size-large $font-weight-bold,
-  'h3' $font-size-xmedium $font-weight-bold,
-  'h4' $font-size-xmedium $font-weight-bold,
-  'h5' $font-size-medium $font-weight-bold,
-  'p' $font-size-small $font-weight-regular;
+  'h2' $font-size-large $font-weight-bold, 'h3' $font-size-xmedium,
+  'h4' $font-size-medium, 'h5' $font-size-small,
+  'p' $font-size-xsmall $font-weight-regular;
 
 .typography {
   @each $name, $font, $weight in $themeVariant {

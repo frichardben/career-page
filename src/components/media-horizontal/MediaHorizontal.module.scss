@@ -1,0 +1,22 @@
+.container {
+  padding: 0 2rem;
+  display: flex;
+  gap: 50px;
+}
+
+.mediaTitle {
+  color: #7d7873;
+  text-transform: uppercase;
+}
+
+.mediaSubTitle {
+  color: #f9b355;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.mediaDescription {
+  text-align: justify;
+  margin-top: 50px;
+  color: #7f7a76;
+}
