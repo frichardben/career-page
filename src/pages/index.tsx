@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Banner } from '../components/banner/Banner'
@@ -7,9 +7,27 @@ import { Divider } from '../components/divider/Divider'
 import { Jobs } from '../components/jobs/Jobs'
 import { MediaHorizontal } from '../components/media-horizontal/MediaHorizontal'
 import { Typography } from '../components/typography/Typography'
+import { api } from '../services/api'
 import styles from '../styles/Home.module.scss'
 
-const Home: NextPage = () => {
+type Localizacao = {
+  bairro?: string
+  cidade?: string
+  pais?: string
+}
+
+type InfoJobs = {
+  cargo: string
+  ativa: boolean
+  link: string
+  localizacao?: Localizacao
+}
+
+interface IHomeProps {
+  allJobs: InfoJobs[]
+}
+
+export default function Home({ allJobs }: IHomeProps) {
   return (
     <div>
       <Head>
@@ -47,7 +65,7 @@ const Home: NextPage = () => {
           </Typography>
           <div className={styles.dividerInfo}>
             <Divider className={styles.line} />
-            <a>
+            <a href="#opportunity">
               Vagas em aberto <span>&#xbb;</span>
             </a>
           </div>
@@ -139,8 +157,12 @@ const Home: NextPage = () => {
 
           <div className={styles.dividerInfo}>
             <Divider className={styles.line} />
-            <a>
-              Vagas em aberto <span>&#xbb;</span>
+            <a
+              href="https://jobs.kenoby.com/elo7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Saiba mais<span> &#xbb;</span>
             </a>
           </div>
         </section>
@@ -160,24 +182,30 @@ const Home: NextPage = () => {
           <Typography className={styles.opportunity} variant="h4">
             Vagas em aberto
           </Typography>
+
           <div className={styles.containerOpportunity}>
             <Typography className={styles.opportunity} variant="h5">
               Desenvovimento
             </Typography>
-            <ul>
-              <li>
-                <Jobs
-                  title="Deselvovedor Mobile Senior (Android e iOS)"
-                  link="http://elo7.dev/vaga/desenvolvedor-mobile-senior"
-                />
-              </li>
-              <li>
-                <Jobs
-                  title="Deselvovedor Java Senior"
-                  link="http://elo7.dev/vaga/desenvolvedor-mobile-senior"
-                  location="Vila Olímpia - São Paulo, Brasil"
-                />
-              </li>
+            <ul id="opportunity">
+              {allJobs.map((job, index) => {
+                const local = job.localizacao
+                  ? `${job.localizacao?.bairro} - ${job.localizacao?.cidade}, ${job.localizacao?.pais}`
+                  : 'Remoto'
+                const isActive = job.ativa
+
+                if (isActive) {
+                  return (
+                    <li key={index}>
+                      <Jobs
+                        title={job.cargo}
+                        link={job.link}
+                        location={local}
+                      />
+                    </li>
+                  )
+                }
+              })}
             </ul>
           </div>
         </section>
@@ -190,4 +218,18 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await api
+    .get('vagas')
+    .then((res) => res.data.vagas)
+    .catch((err) => {
+      console.log(err.message)
+    })
+
+  return {
+    props: {
+      allJobs: response
+    },
+    revalidate: 60 * 60 * 8
+  }
+}
