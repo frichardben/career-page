@@ -2,6 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Banner } from '../components/banner/Banner'
+import { Card } from '../components/card/Card'
+import { Divider } from '../components/divider/Divider'
+import { Jobs } from '../components/jobs/Jobs'
+import { MediaHorizontal } from '../components/media-horizontal/MediaHorizontal'
 import { Typography } from '../components/typography/Typography'
 import styles from '../styles/Home.module.scss'
 
@@ -33,7 +37,7 @@ const Home: NextPage = () => {
           />
         </header>
         <div className={styles.container}>
-          <Typography variant={'p'} weight={'light'} color={'gray'}>
+          <Typography variant={'p'} className={styles.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             convallis a urna dignissim interdum. Maecenas nec diam sit amet
             tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
@@ -41,20 +45,146 @@ const Home: NextPage = () => {
             leo. Donec accumsan, mauris hendrerit sagittis finibus, purus felis
             iaculis ipsum, id maximus nulla nibh ac lectus.
           </Typography>
+          <div className={styles.dividerInfo}>
+            <Divider className={styles.line} />
+            <a>
+              Vagas em aberto <span>&#xbb;</span>
+            </a>
+          </div>
         </div>
+        <section className={styles.info}>
+          <MediaHorizontal
+            imgUrl="/img/placeholder-video.png"
+            alt="video"
+            title="Palavra do Ceo"
+            subtitle="Carlos Curioni"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            convallis a urna dignissim interdum. Maecenas nec diam sit amet
+            tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
+            pharetra a. Morbi commodo feugiat vulputate. Maecenas vel tincidunt
+            leo. Donec accumsan, mauris hendrerit sagittis finibus, purus felis
+            iaculis ipsum, id maximus nulla nibh ac lectus."
+          />
+          <div className={styles.team}>
+            <Typography variant="h3">
+              Conheça nosso time <br />
+              fora de série
+            </Typography>
+            <ul>
+              <li>
+                <Image
+                  src={'/img/camila.png'}
+                  height={'209'}
+                  width={'200'}
+                  alt="Camila"
+                />
+              </li>
+              <li>
+                <Image
+                  src={'/img/guto.png'}
+                  height={'209'}
+                  width={'200'}
+                  alt="Guto"
+                />
+              </li>
+              <li>
+                <Image
+                  src={'/img/david.png'}
+                  height={'209'}
+                  width={'200'}
+                  alt="David"
+                />
+              </li>
+              <li>
+                <Image
+                  src={'/img/beatriz.png'}
+                  height={'209'}
+                  width={'200'}
+                  alt="beatriz"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section className={styles.sectionCulture}>
+          <div className={styles.culture}>
+            <Card
+              imageUrl="/img/qualidade.png"
+              alt="Qualidade"
+              title="Qualidade de vida"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            convallis a urna dignissim interdum. Maecenas nec diam sit amet
+            tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
+            pharetra a. Morbi commodo feugiat vulputate."
+            />
+            <Card
+              imageUrl="/img/descontracao.png"
+              alt="Descontração"
+              title="Ambiente Descontraído"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            convallis a urna dignissim interdum. Maecenas nec diam sit amet
+            tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
+            pharetra a. Morbi commodo feugiat vulputate."
+            />
+            <Card
+              imageUrl="/img/atividades.png"
+              alt="Atividades"
+              title="Atividades extras"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            convallis a urna dignissim interdum. Maecenas nec diam sit amet
+            tortor porttitor accumsan. Morbi luctus orci eros, a molestie purus
+            pharetra a. Morbi commodo feugiat vulputate."
+            />
+          </div>
+
+          <div className={styles.dividerInfo}>
+            <Divider className={styles.line} />
+            <a>
+              Vagas em aberto <span>&#xbb;</span>
+            </a>
+          </div>
+        </section>
+        <section className={styles.sectionOpportunity}>
+          <div className={styles.imageBottom}>
+            <Image
+              src={'/img/foto-bottom.png'}
+              alt="foto-bottom"
+              height={'300'}
+              width={'860'}
+              // height={'100%'}
+              // width={'100%'}
+              layout={'responsive'}
+              objectFit={'contain'}
+            />
+          </div>
+          <Typography className={styles.opportunity} variant="h4">
+            Vagas em aberto
+          </Typography>
+          <div className={styles.containerOpportunity}>
+            <Typography className={styles.opportunity} variant="h5">
+              Desenvovimento
+            </Typography>
+            <ul>
+              <li>
+                <Jobs
+                  title="Deselvovedor Mobile Senior (Android e iOS)"
+                  link="http://elo7.dev/vaga/desenvolvedor-mobile-senior"
+                />
+              </li>
+              <li>
+                <Jobs
+                  title="Deselvovedor Java Senior"
+                  link="http://elo7.dev/vaga/desenvolvedor-mobile-senior"
+                  location="Vila Olímpia - São Paulo, Brasil"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <Typography variant="p"> &copy; Elo7</Typography>
       </footer>
     </div>
   )

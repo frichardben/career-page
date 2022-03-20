@@ -1,3 +1,9 @@
 import styles from './Divider.module.scss'
 
-export const Divider = () => <hr className={styles.divider} />
+export interface IDividerProps {
+  className?: string
+}
+
+export const Divider = ({ className }: IDividerProps) => (
+  <hr className={`${styles.divider} ${className}`} />
+)

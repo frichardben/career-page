@@ -24,15 +24,15 @@ describe('MediaHorizontal', () => {
   })
 
   it('should be render parameters', () => {
-    render(<MediaHorizontal {...props}/>)
-    
+    render(<MediaHorizontal {...props} />)
+
     const imgAlt = screen.getByAltText('Descontração')
     expect(imgAlt).toBeDefined()
 
-    const title = screen.getByRole('heading', {name: 'Ambiente'})
+    const title = screen.getByRole('heading', { name: 'Ambiente' })
     expect(title).toBeDefined()
 
-    const subtitle = screen.getByRole('heading', {name: 'Descontraido'})
+    const subtitle = screen.getByRole('heading', { name: 'Descontraido' })
     expect(subtitle).toBeDefined()
 
     const description = screen.getByText('Lorem testes')

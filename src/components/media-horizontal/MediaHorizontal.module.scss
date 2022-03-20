@@ -1,7 +1,16 @@
+@import '../../styles/mixin';
+
 .container {
-  padding: 0 2rem;
+  padding: 0 3.125rem;
   display: flex;
-  gap: 50px;
+
+  @include respond-to('small') {
+    flex-direction: column;
+  }
+
+  @include respond-to('xlarge') {
+    flex-direction: row;
+  }
 }
 
 .mediaTitle {
@@ -19,4 +28,14 @@
   text-align: justify;
   margin-top: 50px;
   color: #7f7a76;
+}
+
+.mediaImage {
+  &:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  @include respond-to('large') {
+    flex: 1;
+  }
 }
