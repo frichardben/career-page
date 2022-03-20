@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "jest --watchAll",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -16,9 +17,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
+    "**/*.{js,ts,jsx,tsx}": [
+      "yarn eslint --fix",
+      "yarn test --watchAll=false --findRelatedTests --bail"
     ]
   },
   "dependencies": {
@@ -50,6 +51,7 @@
     "eslint": "^8.11.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
