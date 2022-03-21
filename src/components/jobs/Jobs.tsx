@@ -1,11 +1,6 @@
 import Link from 'next/link'
+import { IJobsProps } from '../../types'
 import styles from './Jobs.module.scss'
-
-export interface IJobsProps {
-  link: string
-  title: string
-  location?: string
-}
 
 export const Jobs = ({ title, link, location = 'Remoto' }: IJobsProps) => {
   return (

@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { IJobsProps, Jobs } from './Jobs'
+import { IJobsProps } from '../../types'
+import { Jobs } from './Jobs'
 
 describe('Jobs', () => {
   let props: IJobsProps
@@ -22,8 +23,7 @@ describe('Jobs', () => {
   })
 
   it('should be render parameters', () => {
-
-    render(<Jobs {...props}/>)
+    render(<Jobs {...props} />)
 
     const title = screen.getByText('React Native')
     expect(title).toBeDefined()

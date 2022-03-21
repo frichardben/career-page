@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { IMediaHorizontalProps, MediaHorizontal } from './MediaHorizontal'
+import { IMediaHorizontalProps } from '../../types'
+import { MediaHorizontal } from './MediaHorizontal'
 
 describe('MediaHorizontal', () => {
   let props: IMediaHorizontalProps

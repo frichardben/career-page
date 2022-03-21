@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react'
+import { ITypographyProps } from '../../types'
 
-import { Typography, ITypographyProps } from './Typography'
+import { Typography } from './Typography'
 
 export default {
   title: 'Typography',

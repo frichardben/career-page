@@ -1,5 +1,6 @@
-import { Typography, ITypographyProps } from './Typography'
+import { Typography } from './Typography'
 import { render, screen } from '@testing-library/react'
+import { ITypographyProps } from '../../types'
 
 describe('Typography', () => {
   let props: ITypographyProps

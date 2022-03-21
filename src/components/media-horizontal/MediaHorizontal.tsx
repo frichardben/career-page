@@ -1,14 +1,7 @@
 import Image from 'next/image'
+import { IMediaHorizontalProps } from '../../types'
 import { Typography } from '../typography/Typography'
 import styles from './MediaHorizontal.module.scss'
-
-export interface IMediaHorizontalProps {
-  imgUrl: string
-  alt: string
-  title: string
-  subtitle: string
-  description: string
-}
 
 export const MediaHorizontal = ({
   imgUrl,

@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react'
+import { IBannerProps } from '../../types'
 
-import { Banner, IBannerProps } from './Banner'
+import { Banner } from './Banner'
 
 export default {
   title: 'Banner',

@@ -1,13 +1,7 @@
 import Image from 'next/image'
+import { ICardProps } from '../../types'
 import { Typography } from '../typography/Typography'
 import styles from './Card.module.scss'
-
-export interface ICardProps {
-  imageUrl: string
-  alt: string
-  title: string
-  description: string
-}
 
 export const Card = ({ imageUrl, alt, title, description }: ICardProps) => {
   return (
