@@ -21,12 +21,12 @@
 }
 
 .description {
-  color: #7f787a;
+  color: $gray;
 }
 
 .line {
-  width: 300px;
-  margin-bottom: 20px;
+  width: 18.75rem;
+  margin-bottom: $space-medium;
 }
 
 .dividerInfo {
@@ -37,32 +37,32 @@
 
   a {
     color: $cyan;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
     text-transform: uppercase;
   }
 }
 
 .info {
   background-color: $light-gray;
-  padding-block: 50px;
-  margin-block: 50px;
+  padding-block: $space-large;
+  margin-block: $space-large;
 }
 
 .team {
-  margin-top: 50px;
+  margin-top: $space-large;
 
   h3 {
     text-transform: uppercase;
-    color: #7d7873;
+    color: $gray;
     text-align: center;
   }
   ul {
     display: flex;
-    gap: 14px;
+    gap: 0.875rem;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: $space-large;
     flex-wrap: wrap;
   }
 }
@@ -80,7 +80,7 @@
 .imageBottom {
   padding: 0 2rem;
   text-align: center;
-  margin-block: 50px;
+  margin-block: $space-large;
   position: relative;
   width: 100%;
 }
@@ -92,20 +92,20 @@
 }
 .opportunity {
   text-transform: uppercase;
-  color: #7d7873;
+  color: $gray;
 }
 
 .containerOpportunity {
   padding: 0 2rem;
   h5 {
-    margin-top: 50px;
+    margin-top: $space-large;
   }
 
   ul {
-    margin-block: 50px;
+    margin-block: $space-large;
 
     li:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: $space-medium;
     }
   }
   #opportunity {

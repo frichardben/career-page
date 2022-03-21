@@ -15,13 +15,3 @@ $themeVariant: 'h1' $font-size-xlarge $font-weight-bold,
     }
   }
 }
-
-$themeColor: 'orange' $orange, 'white' $white, 'cyan' $cyan, 'gray' $gray;
-
-.color {
-  @each $name, $color in $themeColor {
-    &-#{$name} {
-      color: $color;
-    }
-  }
-}
