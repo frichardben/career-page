@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react'
+import { IMediaHorizontalProps } from '../../types'
 
-import { IMediaHorizontalProps, MediaHorizontal } from './MediaHorizontal'
+import { MediaHorizontal } from './MediaHorizontal'
 
 export default {
   title: 'MediaHorizontal',

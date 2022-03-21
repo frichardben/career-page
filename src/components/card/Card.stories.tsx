@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react'
+import { ICardProps } from '../../types'
 
-import { Card, ICardProps } from './Card'
+import { Card } from './Card'
 
 export default {
   title: 'Card',
@@ -20,5 +21,5 @@ Primary.args = {
   title: 'AMBIENTE DESCONTRAÍDO',
   imageUrl: 'https://i.pravatar.cc/300?u=richard',
   alt: 'pravatar',
-  description: 'Vem em nós'
+  description: 'Texto'
 }

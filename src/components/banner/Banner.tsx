@@ -1,11 +1,6 @@
 import Image from 'next/image'
+import { IBannerProps } from '../../types'
 import styles from './Banner.module.scss'
-
-export type IBannerProps = {
-  img: string
-  alt: string
-  title: string
-}
 
 export const Banner = ({ img, alt, title }: IBannerProps) => (
   <div className={styles.wrapper}>

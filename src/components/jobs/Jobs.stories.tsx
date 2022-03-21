@@ -1,8 +1,7 @@
 import { Story, Meta } from '@storybook/react'
-import { hrefTo, linkTo } from '@storybook/addon-links'
-import { action } from '@storybook/addon-actions'
+import { IJobsProps } from '../../types'
 
-import { IJobsProps, Jobs } from './Jobs'
+import { Jobs } from './Jobs'
 
 export default {
   title: 'Jobs',

@@ -9,23 +9,7 @@ import { MediaHorizontal } from '../components/media-horizontal/MediaHorizontal'
 import { Typography } from '../components/typography/Typography'
 import { api } from '../services/api'
 import styles from '../styles/Home.module.scss'
-
-type Localizacao = {
-  bairro?: string
-  cidade?: string
-  pais?: string
-}
-
-type InfoJobs = {
-  cargo: string
-  ativa: boolean
-  link: string
-  localizacao?: Localizacao
-}
-
-interface IHomeProps {
-  allJobs: InfoJobs[]
-}
+import { IHomeProps } from '../types'
 
 export default function Home({ allJobs }: IHomeProps) {
   return (

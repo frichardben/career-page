@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react'
+import { IDividerProps } from '../../types'
 
-import { Divider, IDividerProps } from './Divider'
+import { Divider } from './Divider'
 
 export default {
   title: 'Divider',

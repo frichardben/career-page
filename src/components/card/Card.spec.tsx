@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import { Card, ICardProps } from './Card'
+import { ICardProps } from '../../types'
+import { Card } from './Card'
 
 describe('Card', () => {
   let props: ICardProps
@@ -24,11 +25,11 @@ describe('Card', () => {
   })
 
   it('should be render parameters', () => {
-    render(<Card {...props}/>)
+    render(<Card {...props} />)
     const imgAlt = screen.getByAltText('Descontração')
     expect(imgAlt).toBeDefined()
 
-    const title = screen.getByRole('heading', {name: 'Ambiente'})
+    const title = screen.getByRole('heading', { name: 'Ambiente' })
     expect(title).toBeDefined()
 
     const description = screen.getByText('Lorem testes')
