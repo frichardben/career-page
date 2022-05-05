@@ -13,7 +13,7 @@ describe('Typography', () => {
   })
 
   it('should render a function', () => {
-    expect(typeof Typography)
+    expect(typeof Typography).toBe('function')
   })
 
   it('should be render without crashing', () => {

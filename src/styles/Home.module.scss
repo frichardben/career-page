@@ -40,6 +40,10 @@
     font-size: $font-size-small;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
+
+    &::after {
+      content: ' » ';
+    }
   }
 }
 
